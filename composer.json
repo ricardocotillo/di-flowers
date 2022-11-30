@@ -46,7 +46,8 @@
     "mindkomm/timber-integration-woocommerce": "^0.6.0",
     "mnsami/composer-custom-directory-installer": "^2.0",
     "wpackagist-plugin/woo-gutenberg-products-block": "^9.0",
-    "wpackagist-plugin/woocommerce-checkout-manager": "^6.3"
+    "wpackagist-plugin/woocommerce-checkout-manager": "^6.3",
+    "wpackagist-plugin/safe-svg": "^2.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './web/app/themes/di-flowers/**/*.twig',
+    './web/app/themes/di-flowers/templates/**/*.twig',
     // './web/app/themes/di-flowers/blocks/**/*.php',
     './web/app/themes/di-flowers/templates/**/*.js',
     // "./resources/**/*.vue",
