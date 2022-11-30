@@ -1,0 +1,37 @@
+<div class="container mx-auto py-4 px-2">
+  <div class="flex flex-wrap gap-10">
+    <div class="flex flex-col gap-3">
+      <a class="text-black visited:text-black text-base uppercase tracking-wider" href="{{site.url}}" rel="home">{{site.name}}</a>
+      <div>
+        {% include "vertical-menu.twig" with {'items': menu.get_items} %}
+        {% include "vertical-menu.twig" with {'items': footer_menu.get_items} %}
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 tracking-wider ">
+      <h6 class="text-base uppercase">Contacto</h6>
+      <ul class="text-xs flex flex-col gap-1">
+        {% if social.phone %}
+          <li><a class="text-black" href="tel:{{ social.phone }}"><i class="las la-phone"></i> {{ social.phone }}</a></li>
+        {% endif %}
+        {% if social.phone %}
+          <li><a class="text-black" href="https://wa.me/{{ social.whatsapp }}"><i class="lab la-whatsapp"></i> {{ social.whatsapp }}</a></li>
+        {% endif %}
+        {% if social.phone %}
+          <li><a class="text-black" href="mailto:{{ social.email }}"><i class="las la-envelope"></i> {{ social.email }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="flex flex-col gap-3 tracking-wider ">
+      <h6 class="text-base uppercase tracking-wider">Síguenos</h6>
+      <div class="flex gap-4 items-center">
+        {% if social.facebook %}
+          <a class="text-xl" href="{{ social.facebook }}"><i class="lab la-facebook-f"></i></a>
+        {% endif %}
+        {% if social.instagram %}
+          <a class="text-3xl" href="{{ social.instagram }}"><i class="lab la-instagram"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <p class="text-center mt-2 pt-2 border-t border-rose-2">Copyright {{"now"|date('Y')}}</p>
+</div>

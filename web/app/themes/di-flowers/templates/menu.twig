@@ -1,0 +1,10 @@
+{% if menu %}
+	<ul class="flex gap-4 w-full">
+	{% for item in items %}
+		<li class="{{ item.classes | join(' ') }} uppercase text-xs tracking-wider">
+			<a class="text-black visited:text-black px-2" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+			{% include "menu.twig" with {'items': item.children} %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

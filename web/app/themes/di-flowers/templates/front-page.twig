@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block hero %}
+  <div
+    class="
+      h-96
+      bg-cover
+      bg-center
+      bg-no-repeat
+      flex
+      justify-center
+      items-center
+    "
+    style="background-image: url({{ site.theme.link }}/static/img/hero.webp)"
+  >
+    <a href="{{ shop_link }}" class="button">Compra Ahora</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {{ post.content }}
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 {{ attrs }}">
+  {% for category in categories %}
+    <div class="flex flex-col gap-2">
+      <img
+        class="rounded-sm"
+        src="{{ category.image.src }}"
+        alt="{{ category.image.caption }}"
+      />
+      <p class="tracking-wider text-center">{{ category.category.name }}</p>
+    </div>
+  {% endfor %}
+</div>
