@@ -17,7 +17,8 @@ module.exports = {
         'rose-alt': '#937885',
       },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.sans]
+        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+        'prata': ['Prata', ...defaultTheme.fontFamily.serif],
       },
       minHeight: {
         'article-content': `calc(100vh - ${defaultTheme.spacing[80]})`,
