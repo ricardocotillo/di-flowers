@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './web/app/themes/di-flowers/templates/**/*.twig',
+    './web/app/themes/di-flowers/views/**/*.twig',
     // './web/app/themes/di-flowers/blocks/**/*.php',
     './web/app/themes/di-flowers/templates/**/*.js',
     // "./resources/**/*.vue",

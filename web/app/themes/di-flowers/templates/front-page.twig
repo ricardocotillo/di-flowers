@@ -2,18 +2,13 @@
 
 {% block hero %}
   <div
-    class="
-      h-96
-      bg-cover
-      bg-center
-      bg-no-repeat
-      flex
-      justify-center
-      items-center
-    "
-    style="background-image: url({{ site.theme.link }}/static/img/hero.webp)"
+    class="h-96 bg-cover bg-center bg-no-repeat"
+    style="background-image: url({{ hero_image.src }})"
   >
-    <a href="{{ shop_link }}" class="button">Compra Ahora</a>
+    <div class="flex flex-col gap-6 justify-center items-center bg-gray-700 bg-opacity-20 w-full h-full">
+      <p class="text-white font-prata text-6xl">{{ hero_txt }}</p>
+      <a href="{{ hero_post.link }}" class="button">{{ hero_btn_txt }}</a>
+    </div>
   </div>
 {% endblock %}
 

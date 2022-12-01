@@ -202,6 +202,22 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'instagram', 'Instagram' )->set_attribute('type', 'url'),
 		) );
 
+	Container::make( 'post_meta', 'Hero' )
+		->where( 'post_id', '=', get_option( 'page_on_front' ) )
+		->add_fields( array(
+			Field::make( 'image', 'df_hero_image', 'Imagen' ),
+			Field::make( 'text', 'df_hero_text', 'Texto' ),
+			Field::make( 'text', 'df_hero_button_text', 'Texto de botón' ),
+			Field::make( 'association', 'df_link_to_page', 'Link a post/página' )
+				->set_types( array(
+					array(
+						'type' => 'post',
+					),
+				) )
+				->set_min( 1 )
+				->set_max( 1 ),
+		) );
+
 	include 'blocks/categories-grid.php';
 	include 'blocks/subscribe-block.php';
 }
