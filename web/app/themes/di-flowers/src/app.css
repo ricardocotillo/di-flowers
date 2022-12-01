@@ -33,6 +33,10 @@ a {
     @apply text-rose-2 visited:underline visited:text-rose-alt;
 }
 
+a:has(.las.la-shopping-bag) {
+    @apply text-gray-900 visited:text-gray-900;
+}
+
 button.button,
 a.button {
     @apply bg-rose-2 hover:bg-rose-alt text-white font-medium px-4 py-2 rounded-sm;   
@@ -48,6 +52,10 @@ a.button {
 
 .page-title, .article-h1 {
     @apply text-center text-3xl tracking-wider uppercase my-10 hidden;
+}
+
+.woocommerce-page .content-wrapper {
+    @apply mb-10;
 }
 
 .woocommerce-breadcrumb {
