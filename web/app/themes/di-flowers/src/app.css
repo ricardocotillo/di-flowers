@@ -33,6 +33,10 @@ a {
     @apply text-rose-2 visited:underline visited:text-rose-alt;
 }
 
+a.category-grid-item {
+    @apply text-black visited:text-black visited:no-underline;
+}
+
 a:has(.las.la-shopping-bag) {
     @apply text-gray-900 visited:text-gray-900;
 }
