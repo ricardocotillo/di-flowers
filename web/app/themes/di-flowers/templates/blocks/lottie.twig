@@ -1,0 +1,9 @@
+<lottie-player
+    src="{{ fields.df_asset_link }}"
+    background="transparent"
+    speed="{{ fields.df_speed }}"
+    style="width: {{ fields.df_width }}{{ fields.df_unit }}; height: {{ fields.df_height }}{{ fields.df_unit }};"
+    {% if fields.df_loop %}loop{% endif %}
+    {% if fields.df_autoplay %}autoplay{% endif %}
+>
+</lottie-player>

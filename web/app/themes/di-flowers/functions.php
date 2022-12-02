@@ -220,6 +220,7 @@ function crb_attach_theme_options() {
 
 	include 'blocks/categories-grid.php';
 	include 'blocks/subscribe-block.php';
+	include 'blocks/lottie.php';
 }
 
 // function smartwp_remove_wp_block_library_css(){
