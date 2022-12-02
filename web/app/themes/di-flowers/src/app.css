@@ -294,7 +294,7 @@ a.button {
 }
 
 .woocommerce-page.woocommerce-checkout form.checkout .col2-set {
-    @apply flex gap-6;
+    @apply flex flex-col md:flex-row gap-6;
 }
 
 .woocommerce-page.woocommerce-checkout form.checkout .col2-set .col-1,
