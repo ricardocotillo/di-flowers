@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc6b86dc669e63a3118d9cca633df821",
+    "content-hash": "2fcb0be75a9a6172204130211324b9dc",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -68,37 +68,39 @@
         },
         {
             "name": "composer/installers",
-            "version": "v2.2.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
-                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
-                "php": "^7.2 || ^8.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
             },
             "require-dev": {
                 "composer/composer": "1.6.* || ^2.0",
                 "composer/semver": "^1 || ^3",
                 "phpstan/phpstan": "^0.12.55",
                 "phpstan/phpstan-phpunit": "^0.12.16",
-                "symfony/phpunit-bridge": "^5.3",
-                "symfony/process": "^5"
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
-                    "dev-main": "2.x-dev"
-                },
-                "plugin-modifies-install-path": true
+                    "dev-main": "1.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -119,6 +121,7 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "https://composer.github.io/installers/",
             "keywords": [
+                "Craft",
                 "Dolibarr",
                 "Eliasis",
                 "Hurad",
@@ -139,6 +142,7 @@
                 "Whmcs",
                 "WolfCMS",
                 "agl",
+                "aimeos",
                 "annotatecms",
                 "attogram",
                 "bitrix",
@@ -157,6 +161,7 @@
                 "grav",
                 "installer",
                 "itop",
+                "joomla",
                 "known",
                 "kohana",
                 "laravel",
@@ -165,7 +170,6 @@
                 "magento",
                 "majima",
                 "mako",
-                "matomo",
                 "mediawiki",
                 "miaoxing",
                 "modulework",
@@ -185,7 +189,9 @@
                 "silverstripe",
                 "sydes",
                 "sylius",
+                "symfony",
                 "tastyigniter",
+                "typo3",
                 "wordpress",
                 "yawik",
                 "zend",
@@ -193,7 +199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.2.0"
+                "source": "https://github.com/composer/installers/tree/v1.12.0"
             },
             "funding": [
                 {
@@ -209,7 +215,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-20T06:45:11+00:00"
+            "time": "2021-09-13T08:19:44+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -272,6 +278,190 @@
                 }
             ],
             "time": "2022-07-30T15:56:11+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-fields",
+            "version": "v3.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/htmlburger/carbon-fields.git",
+                "reference": "2ae6773c004b873a1b0456613b14852c1a436a96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/2ae6773c004b873a1b0456613b14852c1a436a96",
+                "reference": "2ae6773c004b873a1b0456613b14852c1a436a96",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.7",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Carbon_Fields\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "htmlBurger",
+                    "email": "wordpress@htmlburger.com",
+                    "homepage": "https://htmlburger.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Miroslav Mitev",
+                    "email": "mmitev.2create@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Stoyanov",
+                    "email": "stoyanov.gs@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Plamen Kostadinov",
+                    "email": "pkostadinov.2create@gmail.com",
+                    "homepage": "http://plasmen.info/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Panchev",
+                    "email": "Stan4omir@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Marin Atanasov",
+                    "email": "contact@marinatanasov.com",
+                    "homepage": "http://marinatanasov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Siyan Panayotov",
+                    "homepage": "http://siyanpanayotov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Peter Petrov",
+                    "email": "peter.petrov89@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Stoyanov",
+                    "email": "stanimir.k.stoyanov@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kaloyan Ivanov",
+                    "email": "kaloyanxivanov@gmail.com",
+                    "homepage": "http://vilepixels.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Popov",
+                    "homepage": "http://magadanski.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "German Velchev",
+                    "email": "germozy@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Rashko Petrov",
+                    "email": "brutalenemy666@gmail.com",
+                    "homepage": "http://errorfactory.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander Panayotov",
+                    "email": "alexander.panayotov@gmail.com",
+                    "homepage": "http://alexanderpanayotov.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Viktor Vasilev",
+                    "email": "liberalcho@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Georgiev",
+                    "email": "george.georgiev96@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Vasilev",
+                    "email": "atanasvasilev91@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
+            "homepage": "http://carbonfields.net/",
+            "support": {
+                "docs": "http://carbonfields.net/docs/",
+                "email": "wordpress@htmlburger.com",
+                "issues": "https://github.com/htmlburger/carbon-fields/issues",
+                "source": "https://github.com/htmlburger/carbon-fields"
+            },
+            "time": "2022-05-05T14:49:59+00:00"
+        },
+        {
+            "name": "htmlburger/carbon-fields-plugin",
+            "version": "v3.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/htmlburger/carbon-fields-plugin.git",
+                "reference": "bdf850a5a321cd4187a5a1708aa70b5f2fb2523c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields-plugin/zipball/bdf850a5a321cd4187a5a1708aa70b5f2fb2523c",
+                "reference": "bdf850a5a321cd4187a5a1708aa70b5f2fb2523c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0",
+                "htmlburger/carbon-fields": "3.3.4",
+                "php": ">=5.3"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Carbon_Fields_Plugin\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "atanas-angelov-dev",
+                    "email": "atanas.angelov.dev@gmail.com"
+                }
+            ],
+            "description": "WordPress plugin loader for Carbon Fields.",
+            "homepage": "http://carbonfields.net/",
+            "support": {
+                "docs": "http://carbonfields.net/docs/",
+                "email": "wordpress@htmlburger.com",
+                "issues": "https://github.com/htmlburger/carbon-fields/issues",
+                "source": "https://github.com/htmlburger/carbon-fields"
+            },
+            "time": "2022-05-05T14:55:44+00:00"
         },
         {
             "name": "mindkomm/timber-integration-woocommerce",
@@ -1674,15 +1864,15 @@
         },
         {
             "name": "wpackagist-plugin/woo-gutenberg-products-block",
-            "version": "9.0.0",
+            "version": "9.1.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woo-gutenberg-products-block/",
-                "reference": "tags/9.0.0"
+                "reference": "tags/9.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woo-gutenberg-products-block.9.0.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/woo-gutenberg-products-block.9.1.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1692,15 +1882,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "7.1.0",
+            "version": "7.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/7.1.0"
+                "reference": "tags/7.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.7.1.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.7.1.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1710,15 +1900,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-checkout-manager",
-            "version": "6.3.5",
+            "version": "6.3.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-checkout-manager/",
-                "reference": "tags/6.3.5"
+                "reference": "tags/6.3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-checkout-manager.6.3.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-checkout-manager.6.3.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1752,12 +1942,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0399700d159e09b16645945758b65b921d3491fe"
+                "reference": "3e59e9dfd2585e12a905c1f769c3214f7a957d41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0399700d159e09b16645945758b65b921d3491fe",
-                "reference": "0399700d159e09b16645945758b65b921d3491fe",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3e59e9dfd2585e12a905c1f769c3214f7a957d41",
+                "reference": "3e59e9dfd2585e12a905c1f769c3214f7a957d41",
                 "shasum": ""
             },
             "conflict": {
@@ -1766,6 +1956,7 @@
                 "adodb/adodb-php": "<=5.20.20|>=5.21,<=5.21.3",
                 "aheinze/cockpit": "<=2.2.1",
                 "akaunting/akaunting": "<2.1.13",
+                "akeneo/pim-community-dev": "<5.0.119|>=6,<6.0.53",
                 "alextselegidis/easyappointments": "<=1.4.3",
                 "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
                 "amazing/media2click": ">=1,<1.3.3",
@@ -1782,12 +1973,12 @@
                 "awesome-support/awesome-support": "<=6.0.7",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "backdrop/backdrop": "<=1.23",
-                "badaso/core": "<2.6.1",
+                "badaso/core": "<2.7",
                 "bagisto/bagisto": "<0.1.5",
                 "barrelstrength/sprout-base-email": "<1.2.7",
                 "barrelstrength/sprout-forms": "<3.9",
                 "barryvdh/laravel-translation-manager": "<0.6.2",
-                "baserproject/basercms": "<4.5.4",
+                "baserproject/basercms": "<4.7.2",
                 "billz/raspap-webgui": "<=2.6.6",
                 "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
                 "bmarshall511/wordpress_zero_spam": "<5.2.13",
@@ -1815,7 +2006,7 @@
                 "codeigniter4/shield": "= 1.0.0-beta",
                 "codiad/codiad": "<=2.8.4",
                 "composer/composer": "<1.10.26|>=2-alpha.1,<2.2.12|>=2.3,<2.3.5",
-                "concrete5/concrete5": "<9.1.3|>= 9.0.0RC1, < 9.1.3",
+                "concrete5/concrete5": "<=9.1.3|>= 9.0.0RC1, < 9.1.3",
                 "concrete5/core": "<8.5.8|>=9,<9.1",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/contao": ">=4,<4.4.56|>=4.5,<4.9.18|>=4.10,<4.11.7|>=4.13,<4.13.3",
@@ -2046,6 +2237,7 @@
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5,<5.6.3",
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
+                "phpxmlrpc/phpxmlrpc": "<4.9",
                 "pimcore/data-hub": "<1.2.4",
                 "pimcore/pimcore": "<10.5.9",
                 "pocketmine/bedrock-protocol": "<8.0.2",
@@ -2055,7 +2247,7 @@
                 "prestashop/blockwishlist": ">=2,<2.1.1",
                 "prestashop/contactform": ">=1.0.1,<4.3",
                 "prestashop/gamification": "<2.3.2",
-                "prestashop/prestashop": ">=1.6.0.10,<1.7.8.7",
+                "prestashop/prestashop": "<1.7.8.8",
                 "prestashop/productcomments": "<5.0.2",
                 "prestashop/ps_emailsubscription": "<2.6.1",
                 "prestashop/ps_facetedsearch": "<3.4.1",
@@ -2068,6 +2260,7 @@
                 "ptrofimov/beanstalk_console": "<1.7.14",
                 "pusher/pusher-php-server": "<2.2.1",
                 "pwweb/laravel-core": "<=0.3.6-beta",
+                "pyrocms/pyrocms": "<=3.9.1",
                 "rainlab/debugbar-plugin": "<3.1",
                 "rankmath/seo-by-rank-math": "<=1.0.95",
                 "react/http": ">=0.7,<1.7",
@@ -2114,6 +2307,7 @@
                 "snipe/snipe-it": "<6.0.11|>= 6.0.0-RC-1, <= 6.0.0-RC-5",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
+                "spatie/browsershot": "<3.57.4",
                 "spipu/html2pdf": "<5.2.4",
                 "spoonity/tcpdf": "<6.2.22",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
@@ -2171,14 +2365,14 @@
                 "thelia/thelia": ">=2.1-beta.1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "thinkcmf/thinkcmf": "<=5.1.7",
-                "thorsten/phpmyfaq": "<3.1.8",
-                "tinymce/tinymce": "<5.10",
+                "thorsten/phpmyfaq": "<3.1.9",
+                "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
                 "titon/framework": ">=0,<9.9.99",
                 "tobiasbg/tablepress": "<= 2.0-RC1",
                 "topthink/framework": "<=6.0.13",
                 "topthink/think": "<=6.0.9",
                 "topthink/thinkphp": "<=3.2.3",
-                "tribalsystems/zenario": "<=9.3.57186",
+                "tribalsystems/zenario": "<=9.3.57595",
                 "truckersmp/phpwhois": "<=4.3.1",
                 "twig/twig": "<1.44.7|>=2,<2.15.3|>=3,<3.4.3",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.38|>=9,<9.5.29|>=10,<10.4.32|>=11,<11.5.16",
@@ -2285,7 +2479,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-23T23:04:03+00:00"
+            "time": "2022-12-12T23:04:14+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
