@@ -28,3 +28,4 @@ wp-cli.local.yml
 
 # node
 node_modules
+/web/app/themes/di-flowers/dist/
