@@ -12,7 +12,11 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
-$timber = new Timber\Timber();
+$composer_autoload = __DIR__ . '/vendor/autoload.php';
+if ( file_exists( $composer_autoload ) ) {
+	require_once $composer_autoload;
+	$timber = new Timber\Timber();
+}
 
 /**
  * This ensures that Timber is loaded and available as a PHP class.
@@ -221,6 +225,11 @@ function crb_attach_theme_options() {
 	include 'blocks/categories-grid.php';
 	include 'blocks/subscribe-block.php';
 	include 'blocks/lottie.php';
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    \Carbon_Fields\Carbon_Fields::boot();
 }
 
 // function smartwp_remove_wp_block_library_css(){
