@@ -45,7 +45,8 @@
     "wpackagist-plugin/woo-gutenberg-products-block": "^9.0",
     "wpackagist-plugin/woocommerce-checkout-manager": "^6.3",
     "wpackagist-plugin/safe-svg": "^2.0",
-    "wpackagist-plugin/query-monitor": "^3.10"
+    "wpackagist-plugin/query-monitor": "^3.10",
+    "wpackagist-plugin/woocommerce-mercadopago": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
