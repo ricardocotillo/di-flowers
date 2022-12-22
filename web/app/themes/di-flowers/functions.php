@@ -68,7 +68,6 @@ class StarterSite extends Timber\Site {
 		add_action( 'wp_enqueue_scripts', [ $this, 'disable_woocommerce_block_styles' ] );
 		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-		add_filter( 'woocommerce_product_tabs', [ $this, 'my_remove_description_tab' ] );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -83,11 +82,6 @@ class StarterSite extends Timber\Site {
 	function disable_woocommerce_block_styles() {
 		wp_deregister_style( 'wc-blocks-style' );
 		wp_dequeue_style( 'wc-blocks-style' );
-	}
- 
-	function my_remove_description_tab( $tabs ) {
-		unset( $tabs['additional_information'] );
-		return $tabs;
 	}
 
 	/** This is where you add some context
