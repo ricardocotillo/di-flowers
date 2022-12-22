@@ -86,7 +86,6 @@ class StarterSite extends Timber\Site {
 	}
  
 	function my_remove_description_tab( $tabs ) {
-		unset( $tabs['description'] );
 		unset( $tabs['additional_information'] );
 		return $tabs;
 	}
@@ -231,10 +230,3 @@ add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {
     \Carbon_Fields\Carbon_Fields::boot();
 }
-
-// function smartwp_remove_wp_block_library_css(){
-// 	wp_dequeue_style( 'wp-block-library' );
-// 	wp_dequeue_style( 'wp-block-library-theme' );
-// 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
-// } 
-// add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
