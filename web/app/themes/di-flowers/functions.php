@@ -69,6 +69,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 		add_filter( 'woocommerce_product_tabs', [ $this, 'df_remove_tabs' ] );
+		add_filter( 'wc_product_sku_enabled', '__return_false' );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
