@@ -1,0 +1,9 @@
+{% if wc.related_products %}
+  <section class="related products">
+    <ul class="products">
+      {% for post in wc.related_products %}
+        {{ fn('wc_get_template_part', 'content', 'product' ) }}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
