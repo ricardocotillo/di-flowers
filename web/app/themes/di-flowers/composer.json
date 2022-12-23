@@ -20,9 +20,6 @@
     "htmlburger/carbon-fields": "^3.3",
     "mindkomm/timber-integration-woocommerce": "^0.6.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": "5.7.16|6.*"
-  },
   "config": {
     "allow-plugins": {
       "composer/installers": true
