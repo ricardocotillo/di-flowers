@@ -68,6 +68,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'wp_enqueue_scripts', [ $this, 'disable_woocommerce_block_styles' ] );
 		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+		add_filter( 'woocommerce_product_tabs', [ $this, 'df_remove_tabs' ] );
 		parent::__construct();
 	}
 	/** This is where you can register custom post types. */
@@ -101,6 +102,10 @@ class StarterSite extends Timber\Site {
 		];
 		$context['site']  = $this;
 		return $context;
+	}
+
+	function df_remove_tabs( $tabs ) {
+		return [];
 	}
 
 	public function theme_supports() {
