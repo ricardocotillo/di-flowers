@@ -6,7 +6,7 @@ use Timber\Term;
 $context = Timber::context();
 $context['post'] = new Post();
 $img_id = carbon_get_post_meta( get_the_ID(), 'df_hero_image' );
-$link = carbon_get_post_meta( get_the_ID(), 'df_link_to_page', );
+$link = carbon_get_post_meta( get_the_ID(), 'df_link_to_page' );
 
 $context['hero_image'] = new Image( $img_id );
 $context['hero_txt'] = carbon_get_post_meta( get_the_ID(), 'df_hero_text' );
