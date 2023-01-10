@@ -216,6 +216,9 @@ function crb_attach_theme_options() {
 					array(
 						'type' => 'post',
 					),
+					array(
+						'type' => 'term',
+					),
 				) )
 				->set_min( 1 )
 				->set_max( 1 ),
