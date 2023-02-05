@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f482c72a4210aac37b5da622c974352e",
+    "content-hash": "5bccab29cabf77b7f20e8699727fdae7",
     "packages": [
         {
             "name": "composer/installers",
@@ -342,6 +342,25 @@
                 }
             ],
             "time": "2022-07-30T15:51:26+00:00"
+        },
+        {
+            "name": "rcotillo/woo-discount-rules-pro",
+            "version": "2.5.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://portafolio.cotillo.tech/satispress/woo-discount-rules-pro/2.5.4",
+                "shasum": "05700886a59391567ca3d1e00e4176f2694991e9"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Flycart",
+                "homepage": "https://www.flycart.org"
+            },
+            "description": "PRO package for Woo Discount Rules. You need both the Core and PRO packages to get the PRO features running.",
+            "homepage": "http://www.flycart.org"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -1123,6 +1142,24 @@
             "time": "2022-10-16T01:01:54+00:00"
         },
         {
+            "name": "wpackagist-plugin/colorlib-coming-soon-maintenance",
+            "version": "1.0.99",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/colorlib-coming-soon-maintenance/",
+                "reference": "tags/1.0.99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/colorlib-coming-soon-maintenance.1.0.99.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/colorlib-coming-soon-maintenance/"
+        },
+        {
             "name": "wpackagist-plugin/query-monitor",
             "version": "3.11.1",
             "source": {
@@ -1157,6 +1194,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
+            "name": "wpackagist-plugin/woo-discount-rules",
+            "version": "2.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woo-discount-rules/",
+                "reference": "tags/2.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woo-discount-rules.2.5.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woo-discount-rules/"
         },
         {
             "name": "wpackagist-plugin/woo-gutenberg-products-block",
