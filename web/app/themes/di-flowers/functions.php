@@ -8,14 +8,14 @@
  * @since   Timber 0.1
  */
 
+use Timber\Timber;
 use Carbon_Fields\Container;
-use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
 $composer_autoload = __DIR__ . '/vendor/autoload.php';
 if ( file_exists( $composer_autoload ) ) {
 	require_once $composer_autoload;
-	$timber = new Timber\Timber();
+	$timber = new Timber();
 }
 
 /**
@@ -57,7 +57,7 @@ Timber::$autoescape = false;
  * We're going to configure our theme inside of a subclass of Timber\Site
  * You can move this to its own file and include here via php's include("MySite.php")
  */
-class StarterSite extends Timber\Site {
+class StarterSite extends \Timber\Site {
 	/** Add timber support. */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
@@ -70,8 +70,17 @@ class StarterSite extends Timber\Site {
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 		add_filter( 'woocommerce_product_tabs', [ $this, 'df_remove_tabs' ] );
 		add_filter( 'wc_product_sku_enabled', '__return_false' );
+		add_filter('woocommerce_form_field_args',[ $this, 'df_checkout_fields_args' ], 10, 1);
 		parent::__construct();
 	}
+
+	public function df_checkout_fields_args($args) {
+		if (in_array('df-datepicker', $args['class'])) {
+			$args['custom_attributes']['readonly'] = 'readonly';
+		}
+		return $args;
+	}
+
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
 
@@ -91,8 +100,8 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['menu']  = new Timber\Menu('main');
-		$context['footer_menu'] = new Timber\Menu('footer');
+		$context['menu']  = new \Timber\Menu('main');
+		$context['footer_menu'] = new \Timber\Menu('footer');
 		$context['cart_link'] = get_permalink( wc_get_page_id( 'cart' ) );
 		$context['social'] = [
 			'phone'		=> carbon_get_theme_option( 'phone' ),
@@ -176,7 +185,7 @@ class StarterSite extends Timber\Site {
 
 	/** This is where you can add your own functions to twig.
 	 *
-	 * @param string $twig get extension.
+	 * @param object $twig get extension.
 	 */
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
@@ -189,7 +198,7 @@ class StarterSite extends Timber\Site {
 new StarterSite();
 
 if ( class_exists( 'WooCommerce' ) ) {
-    Timber\Integrations\WooCommerce\WooCommerce::init();
+    \Timber\Integrations\WooCommerce\WooCommerce::init();
 }
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
