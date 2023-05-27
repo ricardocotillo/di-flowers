@@ -60,7 +60,7 @@
         "wpackagist-plugin/query-monitor": "^3.10",
         "wpackagist-plugin/woocommerce-mercadopago": "*",
         "wpackagist-plugin/colorlib-coming-soon-maintenance": "^1.0",
-        "rcotillo/woo-discount-rules-pro": "^2.5",
+        "rcotillo/woo-discount-rules-pro": "^2.6",
         "wpackagist-plugin/woo-discount-rules": "^2.5",
         "wpackagist-plugin/depicter": "^1.7",
         "wpackagist-plugin/wp-whatsapp-chat": "^7.0",

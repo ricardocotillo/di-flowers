@@ -356,7 +356,11 @@ a.button {
 }
 .woocommerce-form-row,
 .form-row {
-    @apply flex flex-col gap-2
+    @apply flex flex-col gap-2;
+}
+
+.woocommerce-notices-wrapper {
+    @apply mb-6;
 }
 
 @tailwind utilities;
