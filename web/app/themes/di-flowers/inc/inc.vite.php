@@ -41,21 +41,19 @@ add_action( 'wp_enqueue_scripts', function() {
 
         // read manifest.json to figure out what to enqueue
         $manifest = json_decode( file_get_contents( DIST_PATH . '/manifest.json'), true );
-        
         // is ok
         if (is_array($manifest)) {
             
-            // get first key, by default is 'main.js' but it can change
-            $manifest_key = array_keys($manifest);
-            if (isset($manifest_key[0])) {
-                
+            if (isset($manifest['main.css'])) {
                 // enqueue CSS files
-                foreach(@$manifest[$manifest_key[0]]['css'] as $css_file) {
+                $css_file = @$manifest['main.css']['file'];
+                if (!empty($css_file)) {
                     wp_enqueue_style( 'main', DIST_URI . '/' . $css_file );
                 }
-                
+            }
+            if (isset($manifest['main.js'])) {
                 // enqueue main JS file
-                $js_file = @$manifest[$manifest_key[0]]['file'];
+                $js_file = @$manifest['main.js']['file'];
                 if ( ! empty($js_file)) {
                     wp_enqueue_script( 'main', DIST_URI . '/' . $js_file, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER );
                 }
