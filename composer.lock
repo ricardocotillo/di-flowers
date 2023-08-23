@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a391934b81a932b1e64c88375bfb7db8",
+    "content-hash": "fc8987c28b5dce64bbeff89d2da88f19",
     "packages": [
         {
             "name": "composer/installers",
@@ -1172,6 +1172,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/depicter/"
+        },
+        {
+            "name": "wpackagist-plugin/jetformbuilder",
+            "version": "3.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/jetformbuilder/",
+                "reference": "tags/3.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/jetformbuilder.3.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/jetformbuilder/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",
