@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc8987c28b5dce64bbeff89d2da88f19",
+    "content-hash": "23d3b72b0fba1c2238aff8a18bbac782",
     "packages": [
         {
             "name": "composer/installers",
@@ -1172,6 +1172,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/depicter/"
+        },
+        {
+            "name": "wpackagist-plugin/generateblocks",
+            "version": "1.8.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/generateblocks/",
+                "reference": "tags/1.8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/generateblocks.1.8.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/generateblocks/"
         },
         {
             "name": "wpackagist-plugin/jetformbuilder",
