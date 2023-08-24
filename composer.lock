@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e140dbe3d45932e34429da98ff5328db",
+    "content-hash": "59e244bea39a11a4a9150e5be8336939",
     "packages": [
         {
             "name": "composer/installers",
@@ -1190,6 +1190,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/depicter/"
+        },
+        {
+            "name": "wpackagist-plugin/fluent-smtp",
+            "version": "2.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/fluent-smtp/",
+                "reference": "tags/2.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/fluent-smtp.2.2.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/fluent-smtp/"
         },
         {
             "name": "wpackagist-plugin/generateblocks",
