@@ -56,7 +56,6 @@
         "wpackagist-plugin/woocommerce": "^8.0.2",
         "wpackagist-plugin/woo-gutenberg-products-block": "^10.0",
         "wpackagist-plugin/woocommerce-checkout-manager": "^7.0",
-        "wpackagist-plugin/safe-svg": "^2.0",
         "wpackagist-plugin/query-monitor": "^3.10",
         "wpackagist-plugin/woocommerce-mercadopago": "*",
         "wpackagist-plugin/colorlib-coming-soon-maintenance": "^1.0",
