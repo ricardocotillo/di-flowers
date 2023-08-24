@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7fca4ab58f80e3f1842e382a6e5face",
+    "content-hash": "e140dbe3d45932e34429da98ff5328db",
     "packages": [
         {
             "name": "composer/installers",
@@ -1172,24 +1172,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/code-snippets/"
-        },
-        {
-            "name": "wpackagist-plugin/colorlib-coming-soon-maintenance",
-            "version": "1.0.99",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/colorlib-coming-soon-maintenance/",
-                "reference": "tags/1.0.99"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/colorlib-coming-soon-maintenance.1.0.99.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/colorlib-coming-soon-maintenance/"
         },
         {
             "name": "wpackagist-plugin/depicter",
