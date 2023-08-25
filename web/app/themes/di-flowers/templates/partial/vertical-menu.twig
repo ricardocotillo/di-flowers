@@ -1,0 +1,13 @@
+<ul class="flex flex-col gap-2">
+  {% for item in items %}
+    <li class="{{ item.classes | join(' ') }} uppercase text-xs tracking-wider group">
+      <div class="flex gap-1">
+        <a class="text-black visited:text-black" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+        {% if item.children %}<i class="las la-angle-down"></i>{% endif %}
+      </div>
+      <div class="hidden pt-2 ml-2 group-hover:block">
+        {% include "partial/vertical-menu.twig" with {'items': item.children} %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

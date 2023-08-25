@@ -1,15 +1,15 @@
-<div class="container mx-auto py-4 px-2">
+<div class="container px-2 py-4 mx-auto">
   <div class="flex flex-wrap gap-10">
     <div class="flex flex-col gap-3">
-      <a class="text-black visited:text-black text-base uppercase tracking-wider" href="{{site.url}}" rel="home">{{site.name}}</a>
+      <a class="text-base tracking-wider text-black uppercase visited:text-black" href="{{site.url}}" rel="home">{{site.name}}</a>
       <div>
-        {% include "vertical-menu.twig" with {'items': menu.get_items} %}
-        {% include "vertical-menu.twig" with {'items': footer_menu.get_items} %}
+        {% include "partial/vertical-menu.twig" with {'items': menu.get_items} %}
+        {% include "partial/vertical-menu.twig" with {'items': footer_menu.get_items} %}
       </div>
     </div>
     <div class="flex flex-col gap-3 tracking-wider ">
       <h6 class="text-base uppercase">Contacto</h6>
-      <ul class="text-xs flex flex-col gap-1">
+      <ul class="flex flex-col gap-1 text-xs">
         {% if social.phone %}
           <li><a class="text-black" href="tel:{{ social.phone }}"><i class="las la-phone"></i> {{ social.phone }}</a></li>
         {% endif %}
@@ -22,8 +22,8 @@
       </ul>
     </div>
     <div class="flex flex-col gap-3 tracking-wider ">
-      <h6 class="text-base uppercase tracking-wider">Síguenos</h6>
-      <div class="flex gap-4 items-center">
+      <h6 class="text-base tracking-wider uppercase">Síguenos</h6>
+      <div class="flex items-center gap-4">
         {% if social.facebook %}
           <a class="text-xl" href="{{ social.facebook }}"><i class="lab la-facebook-f"></i></a>
         {% endif %}
@@ -33,5 +33,5 @@
       </div>
     </div>
   </div>
-  <p class="text-center mt-2 pt-2 border-t border-rose-2">Copyright {{"now"|date('Y')}}</p>
+  <p class="pt-2 mt-2 text-center border-t border-rose-2">Copyright {{"now"|date('Y')}}</p>
 </div>
