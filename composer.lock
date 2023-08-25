@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59e244bea39a11a4a9150e5be8336939",
+    "content-hash": "cc00b1c19e610174720094462da2ba51",
     "packages": [
         {
             "name": "composer/installers",
@@ -1139,15 +1139,15 @@
         },
         {
             "name": "wpackagist-plugin/admin-site-enhancements",
-            "version": "5.6.0",
+            "version": "5.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/admin-site-enhancements/",
-                "reference": "tags/5.6.0"
+                "reference": "tags/5.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/admin-site-enhancements.5.6.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/admin-site-enhancements.5.6.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1265,15 +1265,15 @@
         },
         {
             "name": "wpackagist-plugin/seo-by-rank-math",
-            "version": "1.0.121.1",
+            "version": "1.0.122",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-                "reference": "tags/1.0.121.1"
+                "reference": "tags/1.0.122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.121.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.122.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1298,24 +1298,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woo-discount-rules/"
-        },
-        {
-            "name": "wpackagist-plugin/woo-gutenberg-products-block",
-            "version": "10.9.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/woo-gutenberg-products-block/",
-                "reference": "tags/10.9.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woo-gutenberg-products-block.10.9.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woo-gutenberg-products-block/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
@@ -1415,12 +1397,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "74f56458b588523f43400b85abb01b1312d2abbd"
+                "reference": "9160fb2612003a99a28abbd588519d5ab3a77024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/74f56458b588523f43400b85abb01b1312d2abbd",
-                "reference": "74f56458b588523f43400b85abb01b1312d2abbd",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/9160fb2612003a99a28abbd588519d5ab3a77024",
+                "reference": "9160fb2612003a99a28abbd588519d5ab3a77024",
                 "shasum": ""
             },
             "conflict": {
@@ -1964,6 +1946,7 @@
                 "verot/class.upload.php": "<=1.0.3|>=2,<=2.0.4",
                 "vova07/yii2-fileapi-widget": "<0.1.9",
                 "vrana/adminer": "<4.8.1",
+                "waldhacker/hcaptcha": "<2.1.2",
                 "wallabag/tcpdf": "<6.2.22",
                 "wallabag/wallabag": "<=2.6.2",
                 "wanglelecc/laracms": "<=1.0.3",
@@ -2066,7 +2049,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-21T21:04:11+00:00"
+            "time": "2023-08-23T09:04:12+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
