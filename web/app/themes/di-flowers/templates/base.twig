@@ -7,17 +7,17 @@
 {% endblock %}
 	<body class="{{body_class}}" data-template="base.twig">
 		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header x-data="{open: false}" class="header shadow-2xl relative bg-white w-full" >
+		<header x-data="{open: false}" class="relative w-full bg-white shadow-2xl header" >
 			{% block header %}
-				<div class="wrapper flex gap-6 py-2 md:py-6 px-4 items-center justify-between">
+				<div class="flex items-center justify-between gap-6 px-4 py-2 wrapper md:py-6">
           <button class="lg:hidden" @click="open = !open" class="mobile-menu-toggle">
             <i x-show="!open" class="las la-bars"></i>
             <i x-show="open" class="las la-times"></i>
           </button>
-					<h1 class="hdr-logo text-sm md:text-2xl font-extrabold uppercase" role="banner">
-						<a class="hdr-logo-link text-black visited:text-black" href="{{site.url}}" rel="home">{{site.name}}</a>
+					<h1 class="text-sm font-extrabold uppercase hdr-logo md:text-2xl" role="banner">
+						<a class="text-black hdr-logo-link visited:text-black" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
-					<nav id="nav-main" class="nav-main flex-grow hidden lg:block" role="navigation">
+					<nav id="nav-main" class="flex-grow hidden nav-main lg:block" role="navigation">
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
           {# menu cart #}
@@ -32,14 +32,7 @@
         x-transition:leave="transition duration-500"
         x-transition:leave-start="top-full"
         x-transition:leave-end="-top-full"
-        class="
-          bg-white
-          py-2
-          px-2
-          absolute
-          left-0
-          right-0
-        ">
+        class="absolute left-0 right-0 px-2 py-2 bg-white ">
         {% include "vertical-menu.twig" with {'items': menu.get_items} %}
       </div>
 		</header>

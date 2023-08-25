@@ -1,0 +1,9 @@
+<div class="absolute hidden bg-white rounded-sm shadow-sm min-w-min group-hover:block">
+  <ul class="flex flex-col gap-2 py-2">
+  {% for item in items %}
+    <li class="{{ item.classes | join(' ') }} uppercase text-xs tracking-wider py-1">
+      <a class="px-4 text-black visited:text-black whitespace-nowrap" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

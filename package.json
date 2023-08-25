@@ -4,7 +4,7 @@
   "description": "di-flowers",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vite",
+    "dev": "vite build -w",
     "build": "vite build"
   },
   "keywords": [],
