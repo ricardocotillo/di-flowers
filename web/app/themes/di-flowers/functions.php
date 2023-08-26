@@ -70,8 +70,14 @@ class StarterSite extends \Timber\Site {
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 		add_filter( 'woocommerce_product_tabs', [ $this, 'df_remove_tabs' ] );
 		add_filter( 'wc_product_sku_enabled', '__return_false' );
-		add_filter('woocommerce_form_field_args',[ $this, 'df_checkout_fields_args' ], 10, 1);
+		add_filter( 'woocommerce_form_field_args',[ $this, 'df_checkout_fields_args' ], 10, 1 );
+		add_filter( 'woocommerce_add_error', [ $this, 'df_add_error' ] );
+		// add_filter( 'facetwp_load_css', '__return_false' );
 		parent::__construct();
+	}
+
+	public function df_add_error($message) {
+		return Timber::compile( 'notices/error.twig', ['message' => $message]);
 	}
 
 	public function df_checkout_fields_args($args) {
@@ -110,6 +116,7 @@ class StarterSite extends \Timber\Site {
 			'facebook' 	=> carbon_get_theme_option( 'facebook' ),
 			'instagram' => carbon_get_theme_option( 'instagram' ),
 		];
+		$context['is_shop'] = is_shop();
 		$context['site']  = $this;
 		return $context;
 	}
@@ -212,6 +219,13 @@ function crb_attach_theme_options() {
 			Field::make( 'text', 'email', 'Correo Electrónico' )->set_attribute('type', 'email'),
 			Field::make( 'text', 'facebook', 'Facebook' )->set_attribute('type', 'url'),
 			Field::make( 'text', 'instagram', 'Instagram' )->set_attribute('type', 'url'),
+			Field::make( 'association', 'df_categories', __( 'Categorias a filtrar' ) )
+				->set_types( array(
+						array(
+							'type'      => 'term',
+							'taxonomy' => 'product_cat',
+						),
+					), ),
 		) );
 
 	include 'blocks/categories-grid.php';
@@ -223,3 +237,10 @@ add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {
     \Carbon_Fields\Carbon_Fields::boot();
 }
+
+function defer_parsing_of_js ( $url ) {
+	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	return "$url' defer ";
+}
+add_filter( 'clean_url', 'defer_parsing_of_js', 100 );

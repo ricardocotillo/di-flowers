@@ -1,1 +1,6 @@
-Sidebar in Timber. Add HTML to your hearts content.
+<div class="relative flex flex-col gap-2 p-6">
+  <h5>Filtra por categoría</h5>
+  {{ facet_cats }}
+  {{ reset }}
+  <button @click="filterOpen = false" class="w-full px-4 py-2 text-error">Cerrar</button>
+</div>

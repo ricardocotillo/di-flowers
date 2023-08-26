@@ -7,8 +7,6 @@ import 'air-datepicker/air-datepicker.css';
 
 window.Alpine = Alpine
 
-Alpine.start()
-
 window.onload = () => {
   const dfInput = document.querySelector('.df-datepicker input')
   if (dfInput) {
@@ -21,4 +19,12 @@ window.onload = () => {
       selectedDates: [startDate]
     })
   }
+  Alpine.start()
+  jQuery('.notice-close').click(function() {
+    const parent = jQuery(this).parents('li')
+    const wrapper = jQuery(this).parents('.woocommerce-error')
+    const children = wrapper.children()
+    if (children.length <= 1) wrapper.remove()
+    else parent.remove()
+  })
 }

@@ -32,7 +32,11 @@ module.exports = {
       },
       minHeight: {
         'article-content': `calc(100vh - ${defaultTheme.spacing[80]})`,
-      }
+      },
+      transitionDuration: {
+        8000: '8000ms',
+        3000: '3000ms',
+      },
     },
   },
   plugins: [

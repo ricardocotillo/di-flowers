@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc00b1c19e610174720094462da2ba51",
+    "content-hash": "39bf76fec98f61813a7080bf6458d2fe",
     "packages": [
         {
             "name": "composer/installers",
@@ -342,6 +342,24 @@
                 }
             ],
             "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "rcotillo/facetwp",
+            "version": "4.2.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://portafolio.cotillo.tech/satispress/facetwp/4.2.4",
+                "shasum": "e13085856c46a164e40e838ac887b8e43d4664f0"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "FacetWP, LLC",
+                "homepage": "https://facetwp.com/"
+            },
+            "description": "Advanced Filtering for WordPress"
         },
         {
             "name": "rcotillo/woo-discount-rules-pro",
