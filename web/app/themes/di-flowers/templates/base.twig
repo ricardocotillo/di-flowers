@@ -53,7 +53,8 @@
           x-transition:leave-end="-translate-x-full"
           class="absolute z-10 bg-white rounded-md shadow-md left-2 layout-sidebar"
         >
-          {% include 'sidebar.twig' %}
+          {# {% include 'sidebar.twig' %} #}
+          {{ sidebar.content }}
         </aside>
       {% endif %}
 			<div class="wrapper {{sidebar_class}}">

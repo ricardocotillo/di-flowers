@@ -72,7 +72,6 @@ class StarterSite extends \Timber\Site {
 		add_filter( 'wc_product_sku_enabled', '__return_false' );
 		add_filter( 'woocommerce_form_field_args',[ $this, 'df_checkout_fields_args' ], 10, 1 );
 		add_filter( 'woocommerce_add_error', [ $this, 'df_add_error' ] );
-		// add_filter( 'facetwp_load_css', '__return_false' );
 		parent::__construct();
 	}
 
@@ -211,19 +210,18 @@ if ( class_exists( 'WooCommerce' ) ) {
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 
 function crb_attach_theme_options() {
-	Container::make( 'theme_options', 'Información de Contacto' )
-		->set_icon( 'dashicons-carrot' )
+	Container::make( 'theme_options', 'Config' )
 		->add_fields( array(
 			Field::make( 'text', 'phone', 'Teléfono' )->set_attribute('type', 'tel'),
 			Field::make( 'text', 'whatsapp', 'Whatsapp' )->set_attribute('type', 'tel'),
 			Field::make( 'text', 'email', 'Correo Electrónico' )->set_attribute('type', 'email'),
 			Field::make( 'text', 'facebook', 'Facebook' )->set_attribute('type', 'url'),
 			Field::make( 'text', 'instagram', 'Instagram' )->set_attribute('type', 'url'),
-			Field::make( 'association', 'df_categories', __( 'Categorias a filtrar' ) )
+			Field::make( 'association', 'df_sidebar', __( 'Sidebar' ) )
 				->set_types( array(
 						array(
-							'type'      => 'term',
-							'taxonomy' => 'product_cat',
+							'type'      => 'post',
+							'post_type' => 'page',
 						),
 					), ),
 		) );
@@ -239,6 +237,7 @@ function crb_load() {
 }
 
 function defer_parsing_of_js ( $url ) {
+	if( is_admin() ) return $url;
 	if ( FALSE === strpos( $url, '.js' ) ) return $url;
 	if ( strpos( $url, 'jquery.js' ) ) return $url;
 	return "$url' defer ";
