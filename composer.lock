@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39bf76fec98f61813a7080bf6458d2fe",
+    "content-hash": "7e47ab498d9445524ca5345277de8f98",
     "packages": [
         {
             "name": "composer/installers",
@@ -1298,6 +1298,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/seo-by-rank-math/"
+        },
+        {
+            "name": "wpackagist-plugin/shortcoder",
+            "version": "6.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/shortcoder/",
+                "reference": "tags/6.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/shortcoder.6.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/shortcoder/"
         },
         {
             "name": "wpackagist-plugin/woo-discount-rules",

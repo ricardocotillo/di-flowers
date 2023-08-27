@@ -115,7 +115,7 @@ class StarterSite extends \Timber\Site {
 			'facebook' 	=> carbon_get_theme_option( 'facebook' ),
 			'instagram' => carbon_get_theme_option( 'instagram' ),
 		];
-		$context['is_shop'] = is_shop();
+		$context['is_shop'] = is_shop() || is_product_category();
 		$context['site']  = $this;
 		return $context;
 	}
