@@ -22,7 +22,7 @@
          #}
         {% do wc_action('woocommerce_archive_description') %}
     </header>
-
+    <div class="facetwp-template">
     {% if fn('woocommerce_product_loop') %}
         {#
          # woocommerce_before_shop_loop hook.
@@ -74,7 +74,7 @@
      # @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
      #}
     {% do wc_action('woocommerce_after_main_content') %}
-
+    </div>
     {#
      # woocommerce_sidebar hook.
      #
