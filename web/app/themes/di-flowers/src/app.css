@@ -379,6 +379,7 @@ a.button {
     background-repeat: no-repeat !important;
     background-size: 1rem !important;
     padding-left: 1.25rem !important;
+    margin-bottom: .75rem !important;
     @apply flex items-center justify-between w-full;
 }
 
