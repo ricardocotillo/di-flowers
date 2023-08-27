@@ -371,6 +371,32 @@ a.button {
 /* Facet WP */
 .facetwp-facet {
     margin-bottom: 0 !important;
+    @apply w-full;
+}
+.facetwp-checkbox {
+    background: url('/app/themes/di-flowers/static/img/checkbox.svg') !important;
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1rem !important;
+    padding-left: 1.25rem !important;
+    @apply flex items-center justify-between w-full;
+}
+
+.facetwp-checkbox.checked {
+    background: url('/app/themes/di-flowers/static/img/checkbox-checked.svg') !important;
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1rem !important;
+    padding-left: 1.25rem !important;
+}
+.facetwp-counter {
+    @apply flex items-center justify-center w-10 py-[2px] text-xs text-white rounded-full bg-primary;
+}
+.facetwp-counter:not(.facetwp-depth .facetwp-counter) {
+    @apply hidden;
+}
+.facetwp-expand {
+    @apply text-2xl;
 }
 
 button.facetwp-reset {

@@ -72,9 +72,25 @@ class StarterSite extends \Timber\Site {
 		add_filter( 'wc_product_sku_enabled', '__return_false' );
 		add_filter( 'woocommerce_form_field_args',[ $this, 'df_checkout_fields_args' ], 10, 1 );
 		add_filter( 'woocommerce_add_error', [ $this, 'df_add_error' ] );
+		add_filter( 'facetwp_assets', [ $this, 'df_facetwp_assets' ] );
+		add_filter( 'facetwp_facet_html', [ $this, 'df_facetwp_facet_html' ], 10, 2 );
 		parent::__construct();
 	}
 
+	public function df_facetwp_facet_html( $output, $params ) {
+		if ($params['facet']['type'] == 'checkboxes') {
+			$output = str_replace('(', '', $output);
+			$output = str_replace(')', '', $output);
+		}
+		return $output;
+	}
+
+	public function df_facetwp_assets( $assets ) {
+		FWP()->display->json['expand'] = '<span><i class="las la-plus-square"></i></span>';
+		FWP()->display->json['collapse'] = '<span><i class="las la-minus-square"></i></span>';
+		return $assets;
+	}
+	
 	public function df_add_error($message) {
 		return Timber::compile( 'notices/error.twig', ['message' => $message]);
 	}
