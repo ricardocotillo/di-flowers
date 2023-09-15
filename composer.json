@@ -68,7 +68,9 @@
         "wpackagist-plugin/fluent-smtp": "^2.2",
         "wpackagist-plugin/jetformbuilder": "^3.1",
         "rcotillo/facetwp": "^4.2",
-        "wpackagist-plugin/shortcoder": "^6.3"
+        "wpackagist-plugin/shortcoder": "^6.3",
+        "wpackagist-plugin/cache-enabler": "^1.8",
+        "wpackagist-plugin/autoptimize": "3.1.8.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7.1",
